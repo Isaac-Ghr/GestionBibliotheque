@@ -7,15 +7,19 @@ $req->execute();
 $lesNationalites=$req->fetchAll();
 ?>
 
-<main role="main">
-<div class="containner">
+<div class="container mt-5">
 
-    <table class="table table-striped">
+    <div class="row pt-3">
+        <div class="col-9"><h2>Liste des Nationalités</h2></div>
+        <div class="col-3"><a href="" class="btn btn-success">Modifier la table</a></div>
+    </div>
+
+    <table class="table table-hover table-striped">
     <thead>
         <tr>
-        <th scope="col">Numéro</th>
-        <th scope="col">Libellé</th>
-        <th scope="col">Action</th>
+        <th scope="col" class="col-2">Numéro</th>
+        <th scope="col" class="col-8">Libellé</th>
+        <th scope="col" class="col-2">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -23,9 +27,12 @@ $lesNationalites=$req->fetchAll();
         foreach($lesNationalites as $nationalite)
         {
             echo "<tr>";
-            echo "<td>{$nationalite->num}</th>";
-            echo "<td>{$nationalite->libelle}</th>";
-            echo "<td>1</th>";
+            echo "<td class='col-2'>{$nationalite->num}</th>";
+            echo "<td class='col-8'>{$nationalite->libelle}</th>";
+            echo "<td class='col-2'>
+            <a href='#' class='btn btn-primary' role='button'>Editer</a>
+            <a href='#' class='btn btn-danger' role='button'>Supprimer</a>
+            </td>";
             echo "</tr>";
         }
         ?>
@@ -33,6 +40,5 @@ $lesNationalites=$req->fetchAll();
     </table>
 
 </div>
-</main>
 
 <?php include "include/footer.php"; ?>
