@@ -11,7 +11,7 @@ $lesNationalites=$req->fetchAll();
 
     <div class="row pt-3">
         <div class="col-9"><h2>Liste des Nationalités</h2></div>
-        <div class="col-3"><a href="" class="btn btn-success">Modifier la table</a></div>
+        <div class="col-3"><a href="ajoutNationalite.php" class="btn btn-success">Modifier la table</a></div>
     </div>
 
     <table class="table table-hover table-striped">
