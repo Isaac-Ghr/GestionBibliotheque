@@ -10,6 +10,8 @@ C'est une application web permettant de lire et modifier les valeurs d'une base 
 - Supprimper des valeurs
 
 ## Todos
+### Général
+- [ ] Modifier la page d'accueil, étant actuellement un template
 ### Table Genre
 - [ ] Afficher la tables
 - [ ] Créer un formulaire d'ajout de valeur
@@ -17,7 +19,7 @@ C'est une application web permettant de lire et modifier les valeurs d'une base 
 - [ ] Créer un formulaire de confirmation de suppression de valeur
 
 ### Table Auteur
-- [x] Afficher la tables
+- [ ] Afficher la tables
 - [ ] Créer un formulaire d'ajout de valeur
 - [ ] Créer un formulaire de modification de valeur
 - [ ] Créer un formulaire de confirmation de suppression de valeur
