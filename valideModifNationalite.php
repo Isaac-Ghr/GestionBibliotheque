@@ -1,9 +1,10 @@
 <?php include "include/header.php"; 
 include "connexionPDO.php";
-$libelle=$_POST['num']; 
+$num=$_POST['num']; 
 $libelle=$_POST['libelle']; // donnée du formulaire
 
 $req=$monPdo->prepare("UPDATE nationalite SET libelle = :libelle WHERE num = :num");
+$req->bindParam(':num', $num);
 $req->bindParam(':libelle', $libelle);
 $nb = $req->execute();
 
@@ -18,7 +19,8 @@ if($nb ==1)
     echo '<div class="alert alert-danger" role="alert">
         La nationalité n\'a pas été modifiée ! </div>';
 }
-echo '</div> </div> </div>';
+echo '</div> </div>';
 ?>
 <a href="listeNationalite.php" class="btn btn-primary">Revenir à la liste</a>
+</div>
 <?php include "include/footer.php"; ?>

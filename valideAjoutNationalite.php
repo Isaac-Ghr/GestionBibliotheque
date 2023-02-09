@@ -17,7 +17,8 @@ if($nb ==1)
     echo '<div class="alert alert-danger" role="alert">
         La nationalité n\'a pas été ajoutée ! </div>';
 }
-echo '</div> </div> </div>';
+echo '</div> </div>';
 ?>
 <a href="listeNationalite.php" class="btn btn-primary">Revenir à la liste</a>
+</div>
 <?php include "include/footer.php"; ?>
