@@ -30,7 +30,7 @@ else
         <label for="libelle"></label>
         <input type="text" class='form-control' placeholder='Saisir le libellé' name='libelle' value= "<?php if ($action == "Modifier") echo $laNationalite->libelle;?>">
     </div>
-    <?php if ($action == "Modifier") echo "<input type='hidden' name='num' id='num' value= '<?php echo $laNationalite->num;?>'>"; ?>
+    <?php if ($action == "Modifier") echo "<input type='hidden' name='num' id='num' value= '$laNationalite->num'>"; ?>
     <div class="row">
         <div class="col"><a href="listeNationalite.php" class='btn btn-primary btn-block'>Revenir à la liste</a></div>
         <div class="col"><button type='submit' class='btn btn-success btn-block'><?php echo $action;?></button></div>

@@ -12,6 +12,7 @@ C'est une application web permettant de lire et modifier les valeurs d'une base 
 ## Todos
 ### Général
 - [ ] Modifier la page d'accueil, étant actuellement un template
+- [x] Optimisation du formulaire
 ### Table Genre
 - [ ] Afficher la tables
 - [ ] Créer un formulaire d'ajout de valeur
@@ -28,5 +29,5 @@ C'est une application web permettant de lire et modifier les valeurs d'une base 
 - [x] Afficher la tables
 - [x] Créer un formulaire d'ajout de valeur
 - [x] Créer un formulaire de modification de valeur
-- [ ] Créer un formulaire de confirmation de suppression de valeur
+- [x] Ajouter la possibilité de supprimer des valeurs
 ---

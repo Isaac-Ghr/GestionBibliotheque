@@ -1,19 +1,29 @@
 <?php include "include/header.php"; 
 include "connexionPDO.php";
 $action = $_GET['action'];
-$libelle=$_POST['libelle'];
-if ($action == "Ajouter")
-{
-    $req=$monPdo->prepare("INSERT INTO nationalite(libelle) VALUES(:libelle)");
-    $req->bindParam(':libelle', $libelle);
-}
-else
+if ($action != "Supprimer")
 {
     $num=$_POST['num'];
+    $libelle=$_POST['libelle'];
+}
+if ($action == "Modifier") 
+{    
     $req=$monPdo->prepare("UPDATE nationalite SET libelle = :libelle WHERE num = :num");
     $req->bindParam(':num', $num);
     $req->bindParam(':libelle', $libelle);
 }
+else if ($action == "Ajouter")
+{
+    $req=$monPdo->prepare("INSERT INTO nationalite(libelle) VALUES(:libelle)");
+    $req->bindParam(':libelle', $libelle);
+}
+else if ($action == "Supprimer")
+{
+    $numDel = $_GET['num'];
+    $req=$monPdo->prepare("DELETE FROM nationalite WHERE num = :num");
+    $req->bindParam(':num', $numDel);
+}
+
 $nb = $req->execute();
 
 echo '<div class="container mt-5">
