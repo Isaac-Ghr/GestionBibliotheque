@@ -4,6 +4,11 @@ $usernom = 'GHORZII'; // nom de l'utilisateur
 $password = '30/08/2004'; // mot de passe de l'utilisateur
 $bdd = 'GHORZII_Gutenberg'; // nom de la base de donnée
 
+// $hostnom = 'host=127.0.0.1'; // nom ou IP du serveur
+// $usernom = 'root'; // nom de l'utilisateur
+// $password = ''; // mot de passe de l'utilisateur
+// $bdd = 'biblio'; // nom de la base de donnée
+
 try
 {
   // permet de se connecter à la base de données
